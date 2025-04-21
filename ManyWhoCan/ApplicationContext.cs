@@ -28,7 +28,7 @@ namespace ManyWhoCan
             // Отношение многие ко многим между Student и Course
             modelBuilder.Entity<Course>()
                 .HasMany(c => c.Students)
-                .WithMany(s => s.Courses)
+                .WithMany(s => s.Courses);
                 /*.UsingEntity<Dictionary<string, object>>(
                     "StudentCourse",
                     j => j
