@@ -1,0 +1,97 @@
+@ManyWhoCan_HostAddress = https://localhost:7284
+
+
+
+
+
+
+
+
+
+
+
+POST {{ManyWhoCan_HostAddress}}/api/student
+Content-Type: application/json
+
+{
+      "fullNameStudent": "NameStudent"
+}
+
+###
+
+POST {{ManyWhoCan_HostAddress}}/api/teacher
+Content-Type: application/json
+{
+  "fullNameTeacher": "NameTeacher"
+}
+###
+POST {{ManyWhoCan_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+   "courseId": 6,
+  "title": "strioimng",
+   "teacherId": 5,
+   "studentId": 4
+}
+
+###
+
+
+
+
+
+
+GET {{ManyWhoCan_HostAddress}}/api/student
+
+###
+
+
+
+
+
+
+
+
+POST {{ManyWhoCan_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+   "courseId": 9,
+  "title": "titleeee"
+  
+}
+
+###
+
+GET {{ManyWhoCan_HostAddress}}/api/courses
+
+###
+
+
+
+@id=0
+DELETE {{ManyWhoCan_HostAddress}}/api/student/4
+
+###
+
+GET {{ManyWhoCan_HostAddress}}/api/teacher
+
+###
+
+DELETE {{ManyWhoCan_HostAddress}}/api/teacher/5
+
+###
+
+GET {{ManyWhoCan_HostAddress}}/api/courses/
+
+###
+
+
+DELETE {{ManyWhoCan_HostAddress}}/api/courses/9
+
+###
+
+DELETE {{ManyWhoCan_HostAddress}}/api/student/5
+
+###
